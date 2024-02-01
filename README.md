@@ -14,8 +14,6 @@ npm install typescript --save-dev
 npm install typescript
 ```
 
-<img width="1101" alt="image" src="https://github.com/omeatai/mern-project-library-tracker/assets/32337103/9d3685f6-d603-4151-8fb8-ab0bdf70dbb5">
-
 # #End</details>
 
 <details>
