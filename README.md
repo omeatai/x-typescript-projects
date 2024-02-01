@@ -41,7 +41,7 @@ tsc --init
 ```x
   "rootDir": "./src", /* Specify the root folder within your source files. */
   "outDir": "./build/js", /* Specify an output folder for all emitted files. */
-
+  "noEmitOnError": true, /* Disable emitting files if any type checking errors are reported. */
   "target": "es2016", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
   "strict": true, /* Enable all strict type-checking options. */
 
@@ -67,6 +67,7 @@ tsc --init
     "module": "commonjs", /* Specify what module code is generated. */
     "rootDir": "./src", /* Specify the root folder within your source files. */
     "outDir": "./build/js", /* Specify an output folder for all emitted files. */
+    "noEmitOnError": true, /* Disable emitting files if any type checking errors are reported. */
     "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
     /* Type Checking */
     "strict": true, /* Enable all strict type-checking options. */
