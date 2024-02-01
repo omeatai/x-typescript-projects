@@ -1,7 +1,9 @@
 # Learn Typescript
 
+# 1-dave-ts
+
 <details>
-<summary>1. 01-dave-ts </summary>
+<summary>1. Introduction </summary>
 
 # Typescript site
 
@@ -26,12 +28,22 @@ tsc -v
 tsc main.js
 ```
 
-
-
 # #End</details>
 
 <details>
-<summary>2. 02-linkedin-ts </summary>
+<summary>2. I </summary>
+
+```x
+
+```
+
+# #End</details>
+
+
+# 2_linkedin-ts
+
+<details>
+<summary>1. Introduction </summary>
 
 ```x
 
