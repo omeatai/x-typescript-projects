@@ -86,6 +86,8 @@ tsc --init
 <details>
 <summary>2. Basic Types </summary>
 
+# Basic Types
+
 ```ts
 let username: string;
 let password: string;
