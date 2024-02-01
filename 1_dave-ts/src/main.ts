@@ -1,4 +1,4 @@
-let username: string = "John Smith";
+let username: string = "Hope Guild";
 console.log(username);
 
 const userNode = document.getElementById("userNode");
