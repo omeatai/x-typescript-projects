@@ -1,18 +1,32 @@
 # Learn Typescript
 
 <details>
-<summary>1. 01-linkedin-ts </summary>
+<summary>1. 01-dave-ts </summary>
 
-# Typescript Website
+# Typescript site
 
 [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
 
 # Install Typescript
 
 ```x
+npm install typescript -g
 npm install typescript --save-dev
-npm install typescript
 ```
+
+# Check Typescript version
+
+```x
+tsc -v
+```
+
+# Compile Typescript file
+
+```x
+tsc main.js
+```
+
+
 
 # #End</details>
 
