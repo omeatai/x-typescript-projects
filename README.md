@@ -52,7 +52,7 @@ tsc --init
   ]
 ```
 
-```x
+```js
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
@@ -84,19 +84,82 @@ tsc --init
 # #End</details>
 
 <details>
-<summary>2. I </summary>
+<summary>2. Basic Types </summary>
 
-```x
+```ts
+let username: string;
+let password: string;
+let deskNumber: number;
+let isAdmin: boolean;
+let isActive: number | boolean | string;
+let nickname: any;
+let postId: string | number;
 
+username = "Hope Guild";
+deskNumber = 6;
+isAdmin = false;
+const re: RegExp = /\w+/g;
+
+const sum = (a: number, b: number) => {
+  return a + b;
+};
+
+const userNode: HTMLElement | null = document.getElementById("userNode");
+
+userNode ? (userNode.innerHTML = username) : null;
 ```
 
 # #End</details>
 
 
-# 2_linkedin-ts
+# 2
 
 <details>
 <summary>1. Introduction </summary>
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
 
 ```x
 
