@@ -26,9 +26,10 @@ tsc -v
 
 ```x
 tsc main.js
-tsc main.js -W
-tsc -W
-tsc --noEmitOnError -W
+tsc main.js -w
+tsc main.js --watch
+tsc -w
+tsc --noEmitOnError -w
 ```
 
 # Setup ts-config file
