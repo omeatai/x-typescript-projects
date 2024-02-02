@@ -52,7 +52,7 @@ tsc --init
   ]
 ```
 
-```x
+```js
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
@@ -84,19 +84,140 @@ tsc --init
 # #End</details>
 
 <details>
-<summary>2. I </summary>
+<summary>2. Basic Types </summary>
+
+# Basic Types
+
+```ts
+let username: string;
+let password: string;
+let deskNumber: number;
+let isAdmin: boolean;
+let isActive: number | boolean | string;
+let nickname: any;
+let postId: string | number;
+
+username = "Hope Guild";
+deskNumber = 6;
+isAdmin = false;
+const re: RegExp = /\w+/g;
+
+const sum = (a: number, b: number) => {
+  return a + b;
+};
+
+const userNode: HTMLElement | null = document.getElementById("userNode");
+
+userNode ? (userNode.innerHTML = username) : null;
+```
+
+# #End</details>
+
+<details>
+<summary>3. Arrays, Objects and Type Setting </summary>
+
+# Arrays, Objects and Type Setting
+
+```ts
+// Arrays
+let stringArr: string[] = ["one", "hey", "Dave"];
+let guitars: (string | number)[] = ["Strat", "Les Paul", 5150];
+let mixedData: (string | number | boolean)[] = ["EVH", 1984, true];
+
+stringArr[0] = "John";
+stringArr.push("hey");
+
+guitars[0] = 1984;
+guitars.push("Jazzmaster");
+guitars.unshift("Jimmy");
+
+let bands: string[] = [];
+bands.push("Van Sar", "Metallica", "Iron Maiden");
+
+// Tuple
+let myTuple: [string, number, boolean] = ["Dave", 42, true];
+
+myTuple[1] = 45;
+
+// Objects
+let myObj: object;
+myObj = ["bob", 2, true];
+
+// Type setting
+
+type Player = {
+  name: string;
+  age: string | number;
+  isCool?: boolean;
+  schools: (number | string)[];
+};
+
+let myObj2: Player = {
+  name: "Dave",
+  age: 42,
+  isCool: true,
+  schools: ["UCLA", "USC"],
+};
+
+let jp: Player = {
+  name: "Jimmy",
+  age: "40",
+  schools: ["I", "II", "IV"],
+};
+
+const greetGuitarist = (guitarist: Player) => {
+  return `Hello ${guitarist.name}!`;
+};
+
+console.log(greetGuitarist(jp));
+```
+
+# #End</details>
+
+<details>
+<summary>4. Using Interfaces </summary>
+
+# Using Interfaces
 
 ```x
 
 ```
 
-# #End</details>
+```x
 
+```
 
-# 2_linkedin-ts
+```x
 
-<details>
-<summary>1. Introduction </summary>
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
+
+```x
+
+```
 
 ```x
 
