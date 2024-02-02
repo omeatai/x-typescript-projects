@@ -113,11 +113,10 @@ userNode ? (userNode.innerHTML = username) : null;
 
 # #End</details>
 
-
-# 2
-
 <details>
-<summary>1. Introduction </summary>
+<summary>3. Arrays and Objects </summary>
+
+# Arrays and Objects
 
 ```x
 
