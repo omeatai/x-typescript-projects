@@ -1,17 +1,33 @@
 "use strict";
-let username;
-let password;
-let deskNumber;
-let isAdmin;
-let isActive;
-let nickname;
-let postId;
-username = "Hope Guild";
-deskNumber = 6;
-isAdmin = false;
-const re = /\w+/g;
-const sum = (a, b) => {
-    return a + b;
+// Arrays
+let stringArr = ["one", "hey", "Dave"];
+let guitars = ["Strat", "Les Paul", 5150];
+let mixedData = ["EVH", 1984, true];
+stringArr[0] = "John";
+stringArr.push("hey");
+guitars[0] = 1984;
+guitars.push("Jazzmaster");
+guitars.unshift("Jimmy");
+let bands = [];
+bands.push("Van Sar", "Metallica", "Iron Maiden");
+// Tuple
+let myTuple = ["Dave", 42, true];
+myTuple[1] = 45;
+// Objects
+let myObj;
+myObj = ["bob", 2, true];
+let myObj2 = {
+    name: "Dave",
+    age: 42,
+    isCool: true,
+    schools: ["UCLA", "USC"],
 };
-const userNode = document.getElementById("userNode");
-userNode ? (userNode.innerHTML = username) : null;
+let jp = {
+    name: "Jimmy",
+    age: "40",
+    schools: ["I", "II", "IV"],
+};
+const greetGuitarist = (guitarist) => {
+    return `Hello ${guitarist.name}!`;
+};
+console.log(greetGuitarist(jp));
