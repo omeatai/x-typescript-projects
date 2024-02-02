@@ -179,7 +179,7 @@ console.log(greetGuitarist(jp));
 
 # Using Interfaces
 
-```x
+```ts
 // Using Interfaces
 
 interface Player {
