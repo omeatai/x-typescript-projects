@@ -175,7 +175,44 @@ console.log(greetGuitarist(jp));
 # #End</details>
 
 <details>
-<summary>4. Using Interfaces </summary>
+<summary>4. Using Type Aliases </summary>
+
+# Using Type Aliases
+
+```ts
+// Type Aliases
+
+type stringOrNumber = string | number;
+
+type stringOrNumberArray = (string | number)[];
+type stringOrNumberArray2 = Array<string | number>;
+
+type Guitarist = {
+  name?: string;
+  active: boolean;
+  albums: stringOrNumberArray;
+};
+
+```
+
+# #End</details>
+
+<details>
+<summary>5. Using Literal Types </summary>
+
+# Using Literal Types
+
+```ts
+// Literal types
+
+let userName: "Dave" | "John" | "Amy";
+userName = "Amy";
+```
+
+# #End</details>
+
+<details>
+<summary>6. Using Interfaces </summary>
 
 # Using Interfaces
 
@@ -212,7 +249,7 @@ console.log(greetGuitarist(jp));
 # #End</details>
 
 <details>
-<summary>5. Using Enums </summary>
+<summary>7. Using Enums </summary>
 
 # Using Enums
 
@@ -233,43 +270,39 @@ console.log(Grade.B); //3
 # #End</details>
 
 <details>
-<summary>6. Using Functions </summary>
+<summary>8. Using Functions </summary>
 
 # Using Functions
 
-```x
+```ts
 
 ```
 
-```x
+```ts
 
 ```
 
-```x
+```ts
 
 ```
 
-```x
+```ts
 
 ```
 
-```x
+```ts
 
 ```
 
-```x
+```ts
 
 ```
 
-```x
+```ts
 
 ```
 
-```x
-
-```
-
-```x
+```ts
 
 ```
 
