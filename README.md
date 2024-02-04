@@ -560,9 +560,110 @@ console.log(MyBands.data);
 # #End</details>
 
 <details>
-<summary>12. U </summary>
+<summary>12. Index Signatures & keyof Assertions </summary>
 
-# U
+# Index Signatures & keyof Assertions
+
+```ts
+// Index Signatures
+
+//////////////////////////////////////////////////
+
+interface TransactionObj {
+  readonly [index: string]: number;
+  Pizza: number;
+  Books: number;
+  Job: number;
+}
+
+// interface TransactionObj {
+// Pizza: number;
+// Books: number;
+// Job: number;
+// }
+
+const todaysTransactions: TransactionObj = {
+  Pizza: -10,
+  Books: -5,
+  Job: 50,
+};
+
+console.log(todaysTransactions.Pizza);
+console.log(todaysTransactions["Pizza"]);
+
+let prop: string = "Pizza";
+console.log(todaysTransactions[prop]);
+
+const todaysNet = (transactions: TransactionObj): number => {
+  let total = 0;
+  for (const transaction in transactions) {
+    total += transactions[transaction];
+  }
+  return total;
+};
+
+console.log(todaysNet(todaysTransactions));
+
+//////////////////////////////////////////////////
+
+interface Student {
+  [key: string]: string | number | number[] | undefined;
+  name: string;
+  GPA: number;
+  classes?: number[];
+}
+
+const student: Student = {
+  name: "Doug",
+  GPA: 3.5,
+  classes: [100, 200],
+};
+
+for (const key in student) {
+  console.log(`${key}: ${student[key as keyof Student]}`);
+}
+
+Object.keys(student).map((key) => {
+  console.log(student[key as keyof typeof student]);
+});
+
+const logStudentKey = (student: Student, key: keyof Student): void => {
+  console.log(`Student ${key}: ${student[key]}`);
+};
+
+logStudentKey(student, "GPA");
+
+//////////////////////////////////////////////////
+
+// interface Incomes {
+//   [key: string]: number;
+//   Pizza: string;
+// }
+
+type Streams = "salary" | "bonus" | "sidehustle";
+type Incomes = Record<Streams, number | string>;
+
+const monthlyIncomes: Incomes = {
+  salary: 500,
+  bonus: 100,
+  sidehustle: 250,
+};
+
+for (const revenue in monthlyIncomes) {
+  console.log(monthlyIncomes[revenue as keyof Incomes]);
+}
+
+```
+
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/77c67016-bc8b-49a6-af95-5509f6fc5da4">
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/2a501f05-d666-4bbe-a3c0-3f72d2d84845">
+
+# #End</details>
+
+<details>
+<summary>13. Generics </summary>
+
+# Generics
 
 ```ts
 
