@@ -1,23 +1,25 @@
 "use strict";
-// Never Type
-const infinite = () => {
-    let i = 1;
-    while (true) {
-        i++;
-        if (i > 100)
-            break;
-    }
+// convert to more or less specific
+let a = "hello";
+let b = a; // less specific
+let c = a; // more specific
+//with arrow brackets (does not work with JSX)
+let d = "world";
+let e = "world";
+const addOrConcat = (a, b, c) => {
+    if (c === "add")
+        return a + b;
+    return "" + a + b;
 };
-const createError = (errMsg) => {
-    throw new Error(errMsg);
-};
-const isNumber = (value) => {
-    return typeof value === "number" ? true : false;
-};
-const numberOrString = (value) => {
-    if (typeof value === "string")
-        return "string";
-    if (isNumber(value))
-        return "number";
-    return createError("This should never happen!");
-};
+let myVal = addOrConcat(2, 2, "concat");
+let res = 10;
+// The DOM
+const img = document.querySelector("img");
+const myImg = document.getElementById("#img");
+const nextImg = document.getElementById("#img");
+let imgSrc = img.src;
+let myImgSrc = myImg.src;
+const year = document.getElementById("year");
+const thisYear = new Date().getFullYear().toString();
+year.setAttribute("datetime", thisYear);
+year.textContent = thisYear;
