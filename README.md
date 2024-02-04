@@ -275,6 +275,128 @@ console.log(Grade.B); //3
 # Using Functions
 
 ```ts
+// functions
+const add = (a: number, b: number): number => {
+  return a + b;
+};
+
+const logMsg = (message: any): void => {
+  console.log(message);
+};
+
+logMsg("Hello!");
+logMsg(add(2, 3));
+
+// Types and Interfaces with functions
+
+type mathFunction = (a: number, b: number) => number;
+
+interface mathFunction2 {
+  (a: number, b: number): number;
+}
+
+let subtract = function (c: number, d: number): number {
+  return c - d;
+};
+
+let multiply: mathFunction = function (c, d) {
+  return c * d;
+};
+
+logMsg(multiply(2, 2));
+
+// optional parameters
+const addAll = (a: number, b: number, c?: number): number => {
+  if (typeof c !== "undefined") {
+    return a + b + c;
+  }
+  return a + b;
+};
+
+// default parameters
+
+const sumAll = (a: number, b: number, c: number = 2): number => {
+  return a + b + c;
+};
+
+logMsg(addAll(2, 3, 2));
+logMsg(addAll(2, 3));
+logMsg(sumAll(2, 3));
+
+// Rest Parameters
+const total = (a: number, ...nums: number[]): number => {
+  return a + nums.reduce((prev, curr) => prev + curr);
+};
+
+logMsg(total(1, 2, 3, 4, 5));
+
+```
+
+# #End</details>
+
+<details>
+<summary>9. Using Never Type </summary>
+
+# Using Never Type
+
+```ts
+// Never Type
+const infinite = (): void => {
+  let i: number = 1;
+  while (true) {
+    i++;
+    if (i > 100) break;
+  }
+};
+
+const createError = (errMsg: string): never => {
+  throw new Error(errMsg);
+};
+
+const isNumber = (value: any): boolean => {
+  return typeof value === "number" ? true : false;
+};
+
+const numberOrString = (value: number | string): string => {
+  if (typeof value === "string") return "string";
+  if (isNumber(value)) return "number";
+  return createError("This should never happen!");
+};
+
+```
+
+# #End</details>
+
+<details>
+<summary>10. Using Type Assertions </summary>
+
+# Using Type Assertions
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
 
 ```
 
@@ -305,6 +427,60 @@ console.log(Grade.B); //3
 ```ts
 
 ```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+```ts
+
+```
+
+
 
 # #End</details>
 
