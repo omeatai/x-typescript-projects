@@ -423,8 +423,146 @@ year.textContent = thisYear;
 # Using Classes
 
 ```ts
+// Class Example 1
+class Coder {
+  // name: string
+  // music: string
+  // age: number
+  // lang: string
+  secondLang!: string;
+
+  constructor(
+    public readonly name: string,
+    public music: string,
+    private age: number,
+    protected lang: string = "Typescript"
+  ) {
+    this.name = name;
+    this.music = music;
+    this.age = age;
+    this.lang = lang;
+  }
+
+  public getAge() {
+    return `Hello, I'm ${this.age}`;
+  }
+}
+
+class WebDev extends Coder {
+  constructor(
+    public computer: string,
+    name: string,
+    music: string,
+    age: number
+  ) {
+    super(name, music, age);
+    this.computer = computer;
+  }
+
+  public getLang() {
+    return `I write ${this.lang}`;
+  }
+}
+
+const Dave = new Coder("Dave", "Rock", 42);
+console.log(Dave.getAge());
+
+const Sara = new WebDev("Mac", "Sara", "Lofi", 25);
+console.log(Sara.getLang());
+
+// Class Example 2
+
+interface Musician {
+  name: string;
+  instrument: string;
+  play(action: string): string;
+}
+
+class Guitarist implements Musician {
+  name: string;
+  instrument: string;
+
+  constructor(name: string, instrument: string) {
+    this.name = name;
+    this.instrument = instrument;
+  }
+
+  play(action: string) {
+    return `${this.name} ${action} the ${this.instrument}`;
+  }
+}
+
+const Page = new Guitarist("Jimmy", "guitar");
+console.log(Page.play("strums"));
+
+// Class Example 3
+
+class Peeps {
+  static count: number = 0;
+
+  static getCount(): number {
+    return Peeps.count;
+  }
+
+  public id: number;
+
+  constructor(public name: string) {
+    this.name = name;
+    this.id = ++Peeps.count;
+  }
+}
+
+const John = new Peeps("John");
+const Steve = new Peeps("Steve");
+const Amy = new Peeps("Amy");
+
+console.log(Peeps.count);
+console.log(Amy.id);
+console.log(Steve.id);
+console.log(John.id);
+
+// Class Example 4
+class Bands {
+  private dataState: string[];
+
+  constructor() {
+    this.dataState = [];
+  }
+
+  public get data(): string[] {
+    return this.dataState;
+  }
+
+  public set data(value: string[]) {
+    if (Array.isArray(value) && value.every((el) => typeof el === "string")) {
+      this.dataState = value;
+      return;
+    } else {
+      throw new Error("Param is not an array of strings");
+    }
+  }
+}
+
+const MyBands = new Bands();
+MyBands.data = ["Neil Young", "Led Zep"];
+console.log(MyBands.data);
+MyBands.data = [...MyBands.data, "ZZ Top"];
+console.log(MyBands.data);
+MyBands.data = ["Van Halen", "515"];
+console.log(MyBands.data);
 
 ```
+
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/374ed5bb-2d35-4480-a754-ba9bd9f72b67">
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/c6fb3216-3d8f-40b5-8480-9066fd0a3c05">
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/20f32d14-3fa4-47ce-b22d-4ce0f73fd3e7">
+
+# #End</details>
+
+<details>
+<summary>12. U </summary>
+
+# U
 
 ```ts
 
