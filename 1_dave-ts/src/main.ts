@@ -1,27 +1,12 @@
-// Using Interfaces
+// Type Aliases
 
-interface Player {
-  name: string;
-  age: string | number;
-  isCool?: boolean;
-  schools: (number | string)[];
-}
+type stringOrNumber = string | number;
 
-let myObj2: Player = {
-  name: "Dave",
-  age: 42,
-  isCool: true,
-  schools: ["UCLA", "USC"],
+type stringOrNumberArray = (string | number)[];
+type stringOrNumberArray2 = Array<string | number>;
+
+type Guitarist = {
+  name?: string;
+  active: boolean;
+  albums: stringOrNumberArray;
 };
-
-let jp: Player = {
-  name: "Jimmy",
-  age: "40",
-  schools: ["I", "II", "IV"],
-};
-
-const greetGuitarist = (guitarist: Player) => {
-  return `Hello ${guitarist.name}!`;
-};
-
-console.log(greetGuitarist(jp));
