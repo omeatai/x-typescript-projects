@@ -560,9 +560,9 @@ console.log(MyBands.data);
 # #End</details>
 
 <details>
-<summary>12. Index Signatures & keyof Assertions </summary>
+<summary>12. Using Index Signatures & keyof Assertions </summary>
 
-# Index Signatures & keyof Assertions
+# Using Index Signatures & keyof Assertions
 
 ```ts
 // Index Signatures
