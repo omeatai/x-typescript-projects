@@ -1028,6 +1028,18 @@ npm run dev
 
 # Setup Components
 
+[https://github.com/omeatai/x-typescript-projects/commit/59a06d05d1530ddcaf05aa42306f1ab3f7d30711](https://github.com/omeatai/x-typescript-projects/commit/59a06d05d1530ddcaf05aa42306f1ab3f7d30711)
+
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/33d8315e-25cb-44ff-9e57-b882a0243edb">
+<img width="1342" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/696eb98a-4f57-4c71-b8a5-b5e7cdc01a54">
+
+# #End</details>
+
+<details>
+<summary>17. Setup ListItem Model </summary>
+
+# Setup ListItem Model
+
 ```ts
 
 ```
