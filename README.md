@@ -1037,19 +1037,186 @@ npm run dev
 # #End</details>
 
 <details>
-<summary>17. Setup ListItem Model </summary>
+<summary>17. Setup Model - ListItem </summary>
 
-# Setup ListItem Model
+# Setup Model - ListItem
 
 ```ts
+export interface Item {
+  id: string;
+  item: string;
+  checked: boolean;
+}
 
+export default class ListItem implements Item {
+  constructor(
+    private _id: string = "",
+    private _item: string = "",
+    private _checked: boolean = false
+  ) {}
+
+  get id(): string {
+    return this._id;
+  }
+
+  set id(id: string) {
+    this._id = id;
+  }
+
+  get item(): string {
+    return this._item;
+  }
+
+  set item(item: string) {
+    this._item = item;
+  }
+
+  get checked(): boolean {
+    return this._checked;
+  }
+
+  set checked(checked: boolean) {
+    this._checked = checked;
+  }
+}
 ```
 
-```ts
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/a6160baf-f374-47b4-a94a-445f2723532a">
 
+# #End</details>
+
+<details>
+<summary>18. Setup Model - FullList </summary>
+
+# Setup Model - FullList 
+
+```ts
+import ListItem from "./ListItem";
+
+interface List {
+  list: ListItem[];
+  load(): void;
+  save(): void;
+  clearList(): void;
+  addItem(itemObj: ListItem): void;
+  removeItem(id: string): void;
+}
+
+export default class FullList implements List {
+  static instance: FullList = new FullList();
+
+  private constructor(private _list: ListItem[] = []) {}
+
+  get list(): ListItem[] {
+    return this._list;
+  }
+
+  load(): void {
+    const storedList: string | null = localStorage.getItem("myList");
+    if (typeof storedList !== "string") return;
+
+    const parsedList: { _id: string; _item: string; _checked: boolean }[] =
+      JSON.parse(storedList);
+
+    parsedList.forEach((itemObj) => {
+      const newListItem = new ListItem(
+        itemObj._id,
+        itemObj._item,
+        itemObj._checked
+      );
+      FullList.instance.addItem(newListItem);
+    });
+  }
+
+  save(): void {
+    localStorage.setItem("myList", JSON.stringify(this._list));
+  }
+
+  clearList(): void {
+    this._list = [];
+    this.save();
+  }
+
+  addItem(itemObj: ListItem): void {
+    this._list.push(itemObj);
+    this.save();
+  }
+
+  removeItem(id: string): void {
+    this._list = this._list.filter((item) => item.id !== id);
+    this.save();
+  }
+}
 ```
 
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/f8b3a04b-be07-42d3-b2d7-0d90cdc8c618">
+
+# #End</details>
+
+<details>
+<summary>19. Setup Template - ListTemplate </summary>
+
+# Setup Template - ListTemplate 
+
 ```ts
+import FullList from "../model/FullList";
+
+interface DOMList {
+  ul: HTMLUListElement;
+  clear(): void;
+  render(fullList: FullList): void;
+}
+
+export default class ListTemplate implements DOMList {
+  ul: HTMLUListElement;
+
+  static instance: ListTemplate = new ListTemplate();
+
+  private constructor() {
+    this.ul = document.getElementById("listItems") as HTMLUListElement;
+  }
+
+  clear(): void {
+    this.ul.innerHTML = "";
+  }
+
+  render(fullList: FullList): void {
+    this.clear();
+
+    fullList.list.forEach((item) => {
+      const li = document.createElement("li") as HTMLLIElement;
+      li.className = "item";
+
+      const check = document.createElement("input") as HTMLInputElement;
+      check.type = "checkbox";
+      check.id = item.id;
+      check.checked = item.checked;
+      li.append(check);
+
+      check.addEventListener("change", () => {
+        item.checked = !item.checked;
+        fullList.save();
+      });
+
+      const label = document.createElement("label") as HTMLLabelElement;
+      label.htmlFor = item.id;
+      label.textContent = item.item;
+      li.append(label);
+
+      const button = document.createElement("button") as HTMLButtonElement;
+      button.className = "button";
+      button.textContent = "X";
+      li.append(button);
+
+      button.addEventListener("click", () => {
+        fullList.removeItem(item.id);
+        this.render(fullList);
+      });
+
+      this.ul.append(li);
+    });
+  }
+}
 
 ```
 
