@@ -988,6 +988,8 @@ fetchUsers().then(users => console.log(users))
 
 # Install Vite.js with Typescript
 
+[https://github.com/omeatai/x-typescript-projects/commit/a1d3546120117840e4c5de5b0795740ae2d9b961](https://github.com/omeatai/x-typescript-projects/commit/a1d3546120117840e4c5de5b0795740ae2d9b961)
+
 #  Get node version
 
 ```ts
@@ -1022,9 +1024,9 @@ npm run dev
 # #End</details>
 
 <details>
-<summary>16. Setup </summary>
+<summary>16. Setup Components </summary>
 
-# Setup
+# Setup Components
 
 ```ts
 
