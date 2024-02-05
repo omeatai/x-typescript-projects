@@ -1,6 +1,6 @@
 # Learn Typescript
 
-# 1-Typescript-dave-ts
+# 1-Typescript-dave
 
 <details>
 <summary>1. Introduction </summary>
@@ -981,26 +981,50 @@ fetchUsers().then(users => console.log(users))
 
 # #End</details>
 
++Typescript Todo List Project
+
 <details>
-<summary>15. Vite.js with Typescript </summary>
+<summary>15. Install Vite.js with Typescript </summary>
 
-# Vite.js with Typescript
+# Install Vite.js with Typescript
 
-```ts
-
-```
+#  Get node version
 
 ```ts
-
+node -v
 ```
+
+# Create Vite Project
 
 ```ts
-
+npm create vite@latest
+npm create vite@latest . --typescript
+npm create vite@latest 1_dave-ts-2  --typescript
 ```
+
+# Install Vite Dependencies
 
 ```ts
-
+cd 1_dave-ts-2
+npm i
+npm install
 ```
+
+# Run Vite app
+
+```ts
+npm run dev
+```
+
+<img width="1152" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/81169088-0abb-47c1-ae79-4fb2137debfd">
+<img width="1342" alt="image" src="https://github.com/omeatai/x-typescript-projects/assets/32337103/027f4b12-fcec-433c-b875-9384136218d6">
+
+# #End</details>
+
+<details>
+<summary>16. Setup </summary>
+
+# Setup
 
 ```ts
 
