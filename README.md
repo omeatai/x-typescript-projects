@@ -1,6 +1,6 @@
 # Learn Typescript
 
-# 1-dave-ts
+# 1-Typescript-dave-ts
 
 <details>
 <summary>1. Introduction </summary>
